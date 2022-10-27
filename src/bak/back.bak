@@ -1,0 +1,20 @@
+<!--走马灯(轮播图)-->
+<div class="block" style="width: 50%; float: left">
+    <el-carousel height="280px">
+      <el-carousel-item v-for="item in imagePath" :key="item.id">
+        <img :src=item.imgUrl style="width: 100%">
+      </el-carousel-item>
+    </el-carousel>
+</div>
+卡片
+     <div class="webInfo">
+        <el-card class="box-card" >
+          <div slot="header" class="clearfix">
+            <span>卡片名称</span>
+          </div>
+          <div v-for="item in webInfo" :key="item.id" class="text item" style="height: 50px">
+            {{item.msg}}
+          </div>
+        </el-card>
+      </div>
+    </div>
